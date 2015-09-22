@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Breadit</title>
+  <title><%= yield(:banana) %> </title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<header class = "navbar navbar-fixed-top">
+		<div class = "container">
+			<nav>
+				<ul class = "nav navbar">
+					<li><%= link_to "Homebase", root_path %></li>
+					<li><%= link_to "Help me out", help_path %></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
 
 <%= yield %>
 
